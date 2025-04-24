@@ -1,0 +1,13 @@
+# Compute basic statistics for the numerical columns
+print(df.describe())
+
+# Group by 'species' and compute the mean for each numerical column
+grouped_df = df.groupby('species').mean()
+
+# Display the grouped results
+print(grouped_df)
+
+# Example: Check the mean petal length per species
+mean_petal_length = grouped_df['petal length (cm)']
+print("Mean Petal Length per Species:")
+print(mean_petal_length)
