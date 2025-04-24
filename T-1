@@ -1,0 +1,23 @@
+import pandas as pd
+from sklearn.datasets import load_iris
+
+# Load the Iris dataset
+iris = load_iris()
+
+# Convert it into a pandas DataFrame
+df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+
+# Add target as a new column (the species)
+df['species'] = iris.target
+
+# Display the first few rows
+print(df.head())
+
+# Check data types and missing values
+print(df.info())
+
+# Check for missing values
+print(df.isnull().sum())
+
+# If there are missing values, fill them (for this example, no missing values)
+df.fillna(df.mean(), inplace=True)
