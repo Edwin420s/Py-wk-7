@@ -1,0 +1,10 @@
+try:
+    # Example of loading a CSV file
+    df = pd.read_csv('your_dataset.csv')
+    print(df.head())
+except FileNotFoundError:
+    print("Error: The file was not found.")
+except pd.errors.EmptyDataError:
+    print("Error: The file is empty.")
+except Exception as e:
+    print(f"An error occurred: {e}")
