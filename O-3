@@ -1,0 +1,7 @@
+# Create a scatter plot to explore the relationship between sepal length and petal length
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x='sepal length (cm)', y='petal length (cm)', data=df, hue='species')
+plt.title('Sepal Length vs Petal Length')
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Petal Length (cm)')
+plt.show()
