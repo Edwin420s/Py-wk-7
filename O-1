@@ -1,0 +1,9 @@
+import seaborn as sns
+
+# Create a bar chart to compare average petal length for each species
+plt.figure(figsize=(8, 6))
+sns.barplot(x='species', y='petal length (cm)', data=df)
+plt.title('Average Petal Length per Species')
+plt.xlabel('Species')
+plt.ylabel('Petal Length (cm)')
+plt.show()
