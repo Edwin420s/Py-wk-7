@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+
+# Example: Assuming you have a sales dataset with 'Date' and 'Sales' columns
+df_sales = pd.read_csv('sales_data.csv')  # Replace with your sales dataset
+df_sales['Date'] = pd.to_datetime(df_sales['Date'])  # Ensure the Date is in datetime format
+
+plt.plot(df_sales['Date'], df_sales['Sales'])
+plt.title('Sales Trend Over Time')
+plt.xlabel('Date')
+plt.ylabel('Sales')
+plt.xticks(rotation=45)
+plt.show()
